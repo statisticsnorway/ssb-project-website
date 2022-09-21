@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: ../docs
+
+website:
+  title: "SSB-prosjekt"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+  page-footer: 
+    left: "Copyright 2022, Øyvind Bruer-Skarsbø" 
+    center: 
+      - icon: github
+        href: https://github.com/statisticsnorway/ssb-project-website
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
+
+
+

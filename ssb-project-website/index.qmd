@@ -1,0 +1,36 @@
+---
+title: "En template for statistikkproduksjon"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-title: Innhold
+---
+
+Under SSBs hackathon for 2022 har vi laget program som implementerer beste-praksis for koding av statistikkprodukter i Python. Vi har laget et CLI med en tilhørende Jupyterlab-extension som gjør følgende: 
+
+- Oppretter en mappestruktur som er hensiktmessig for statistikkproduksjon.
+
+- Initierer et virtuelt miljø med Python-rammeverket [`Poetry`](https://python-poetry.org/).
+
+- Setter opp en `Python-kernel` for `Jupyterlab` med samme navn som det virtuelle miljøet.
+
+- Setter opp versjonshåndtering med GIT iht til beste praksis for versjonshåndtering i SSB:
+  - initierer `git` den lokale mappen
+  - legger til SSB sine standard `.gitignore` og `.gitattributes`
+  - oppretter et `Github`-repo på [SSB sitt område på Github](https://github.com/statisticsnorway).
+
+## Hvorfor trenger vi dette?
+
+Mer kommer
+
+
+## Hva gjør programmet?
+
+Mer kommer
+
+## Command line interface
+
+## Jupyterlab-extension
+
+Mer kommer 
