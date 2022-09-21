@@ -1,24 +1,37 @@
 ---
-title: "En template for statistikkproduksjon"
+title: "Template for statistikkproduksjon"
 format:
   html:
     toc: true
     toc-location: left
     toc-title: Innhold
+    number-sections: true
 ---
 
-Under SSBs hackathon for 2022 har vi laget program som implementerer beste-praksis for koding av statistikkprodukter i Python. Vi har laget et CLI med en tilhørende Jupyterlab-extension som gjør følgende: 
+**Under SSBs hackathon for 2022 har vi^[*Team dapla-hurtigstart* består av Øyvind Bruer-Skarsbø, Miles Winther, Arne Sørlie og Carl Franklin Corneil.] laget et program som implementerer beste-praksis for koding av statistikkprodukter i Python. Forhåpentligvis gjør dette det lettere å følge god *kode-skikk* og sikrer at statistikk utvikles på en trygg og enhetlig måte.**
+
+Vi har laget et CLI med en tilhørende Jupyterlab-extension som gjør følgende: 
 
 - Oppretter en mappestruktur som er hensiktmessig for statistikkproduksjon.
 
-- Initierer et virtuelt miljø med Python-rammeverket [`Poetry`](https://python-poetry.org/).
+- Initierer et virtuelt miljø med Python-pakken [`Poetry`](https://python-poetry.org/).
 
 - Setter opp en `Python-kernel` for `Jupyterlab` med samme navn som det virtuelle miljøet.
 
 - Setter opp versjonshåndtering med GIT iht til beste praksis for versjonshåndtering i SSB:
-  - initierer `git` den lokale mappen
+  - initierer `git` i den lokale mappen som opprettes
   - legger til SSB sine standard `.gitignore` og `.gitattributes`
   - oppretter et `Github`-repo på [SSB sitt område på Github](https://github.com/statisticsnorway).
+  
+Programmet vi har laget er uavhengig av hvilken IDE du benytter. På sikt ønsker vi å utvide den til å håndtere `R`-baserte prosjekter i tillegg til `Python`. Vi har også laget en `Jupyterlab-extension` som gir brukerne mulighet til å opprette SSB-prosjekter direkte fra Jupyterlab.
+
+F.eks. hvis man ønsker å opprette et prosjekt ved navn `stat-test`, så kan man skrive følgende inn i terminalen:
+
+`ssb-project create stat-test`
+
+Ønsker man å opprette samme prosjekt fra Jupyterlab gjør man følgende: 
+
+
 
 ## Hvorfor trenger vi dette?
 

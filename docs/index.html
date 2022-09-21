@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SSB-prosjekt - En template for statistikkproduksjon</title>
+<title>SSB-prosjekt - Template for statistikkproduksjon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,10 +92,10 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Innhold</h2>
    
   <ul>
-  <li><a href="#hvorfor-trenger-vi-dette" id="toc-hvorfor-trenger-vi-dette" class="nav-link active" data-scroll-target="#hvorfor-trenger-vi-dette">Hvorfor trenger vi dette?</a></li>
-  <li><a href="#hva-gjør-programmet" id="toc-hva-gjør-programmet" class="nav-link" data-scroll-target="#hva-gjør-programmet">Hva gjør programmet?</a></li>
-  <li><a href="#command-line-interface" id="toc-command-line-interface" class="nav-link" data-scroll-target="#command-line-interface">Command line interface</a></li>
-  <li><a href="#jupyterlab-extension" id="toc-jupyterlab-extension" class="nav-link" data-scroll-target="#jupyterlab-extension">Jupyterlab-extension</a></li>
+  <li><a href="#hvorfor-trenger-vi-dette" id="toc-hvorfor-trenger-vi-dette" class="nav-link active" data-scroll-target="#hvorfor-trenger-vi-dette"> <span class="header-section-number">1</span> Hvorfor trenger vi dette?</a></li>
+  <li><a href="#hva-gjør-programmet" id="toc-hva-gjør-programmet" class="nav-link" data-scroll-target="#hva-gjør-programmet"> <span class="header-section-number">2</span> Hva gjør programmet?</a></li>
+  <li><a href="#command-line-interface" id="toc-command-line-interface" class="nav-link" data-scroll-target="#command-line-interface"> <span class="header-section-number">3</span> Command line interface</a></li>
+  <li><a href="#jupyterlab-extension" id="toc-jupyterlab-extension" class="nav-link" data-scroll-target="#jupyterlab-extension"> <span class="header-section-number">4</span> Jupyterlab-extension</a></li>
   </ul>
 </nav>
 </nav>
@@ -107,7 +107,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">En template for statistikkproduksjon</h1>
+<h1 class="title">Template for statistikkproduksjon</h1>
 </div>
 
 
@@ -121,37 +121,48 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>Under SSBs hackathon for 2022 har vi laget program som implementerer beste-praksis for koding av statistikkprodukter i Python. Vi har laget et CLI med en tilhørende Jupyterlab-extension som gjør følgende:</p>
+<p><strong>Under SSBs hackathon for 2022 har vi<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> laget et program som implementerer beste-praksis for koding av statistikkprodukter i Python. Forhåpentligvis gjør dette det lettere å følge god <em>kode-skikk</em> og sikrer at statistikk utvikles på en trygg og enhetlig måte.</strong></p>
+<p>Vi har laget et CLI med en tilhørende Jupyterlab-extension som gjør følgende:</p>
 <ul>
 <li><p>Oppretter en mappestruktur som er hensiktmessig for statistikkproduksjon.</p></li>
-<li><p>Initierer et virtuelt miljø med Python-rammeverket <a href="https://python-poetry.org/"><code>Poetry</code></a>.</p></li>
+<li><p>Initierer et virtuelt miljø med Python-pakken <a href="https://python-poetry.org/"><code>Poetry</code></a>.</p></li>
 <li><p>Setter opp en <code>Python-kernel</code> for <code>Jupyterlab</code> med samme navn som det virtuelle miljøet.</p></li>
 <li><p>Setter opp versjonshåndtering med GIT iht til beste praksis for versjonshåndtering i SSB:</p>
 <ul>
-<li>initierer <code>git</code> den lokale mappen</li>
+<li>initierer <code>git</code> i den lokale mappen som opprettes</li>
 <li>legger til SSB sine standard <code>.gitignore</code> og <code>.gitattributes</code></li>
 <li>oppretter et <code>Github</code>-repo på <a href="https://github.com/statisticsnorway">SSB sitt område på Github</a>.</li>
 </ul></li>
 </ul>
-<section id="hvorfor-trenger-vi-dette" class="level2">
-<h2 class="anchored" data-anchor-id="hvorfor-trenger-vi-dette">Hvorfor trenger vi dette?</h2>
+<p>Programmet vi har laget er uavhengig av hvilken IDE du benytter. På sikt ønsker vi å utvide den til å håndtere <code>R</code>-baserte prosjekter i tillegg til <code>Python</code>. Vi har også laget en <code>Jupyterlab-extension</code> som gir brukerne mulighet til å opprette SSB-prosjekter direkte fra Jupyterlab.</p>
+<p>F.eks. hvis man ønsker å opprette et prosjekt ved navn <code>stat-test</code>, så kan man skrive følgende inn i terminalen:</p>
+<p><code>ssb-project create stat-test</code></p>
+<p>Ønsker man å opprette samme prosjekt fra Jupyterlab gjør man følgende:</p>
+<section id="hvorfor-trenger-vi-dette" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="hvorfor-trenger-vi-dette"><span class="header-section-number">1</span> Hvorfor trenger vi dette?</h2>
 <p>Mer kommer</p>
 </section>
-<section id="hva-gjør-programmet" class="level2">
-<h2 class="anchored" data-anchor-id="hva-gjør-programmet">Hva gjør programmet?</h2>
+<section id="hva-gjør-programmet" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="hva-gjør-programmet"><span class="header-section-number">2</span> Hva gjør programmet?</h2>
 <p>Mer kommer</p>
 </section>
-<section id="command-line-interface" class="level2">
-<h2 class="anchored" data-anchor-id="command-line-interface">Command line interface</h2>
+<section id="command-line-interface" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="command-line-interface"><span class="header-section-number">3</span> Command line interface</h2>
 </section>
-<section id="jupyterlab-extension" class="level2">
-<h2 class="anchored" data-anchor-id="jupyterlab-extension">Jupyterlab-extension</h2>
+<section id="jupyterlab-extension" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="jupyterlab-extension"><span class="header-section-number">4</span> Jupyterlab-extension</h2>
 <p>Mer kommer</p>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p><em>Team dapla-hurtigstart</em> består av Øyvind Bruer-Skarsbø, Miles Winther, Arne Sørlie og Carl Franklin Corneil.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -252,7 +263,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Copyright 2022, Øyvind Bruer-Skarsbø</div>   
+    <div class="nav-footer-left">Copyright 2022, Statistics Norway</div>   
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

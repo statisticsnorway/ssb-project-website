@@ -10,7 +10,7 @@ website:
         text: Home
       - about.qmd
   page-footer: 
-    left: "Copyright 2022, Øyvind Bruer-Skarsbø" 
+    left: "Copyright 2022, Statistics Norway" 
     center: 
       - icon: github
         href: https://github.com/statisticsnorway/ssb-project-website

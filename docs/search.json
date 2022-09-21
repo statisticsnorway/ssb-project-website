@@ -2,37 +2,37 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "En template for statistikkproduksjon",
+    "title": "Template for statistikkproduksjon",
     "section": "",
-    "text": "Under SSBs hackathon for 2022 har vi laget program som implementerer beste-praksis for koding av statistikkprodukter i Python. Vi har laget et CLI med en tilhørende Jupyterlab-extension som gjør følgende:"
+    "text": "Under SSBs hackathon for 2022 har vi1 laget et program som implementerer beste-praksis for koding av statistikkprodukter i Python. Forhåpentligvis gjør dette det lettere å følge god kode-skikk og sikrer at statistikk utvikles på en trygg og enhetlig måte.\nVi har laget et CLI med en tilhørende Jupyterlab-extension som gjør følgende:\nProgrammet vi har laget er uavhengig av hvilken IDE du benytter. På sikt ønsker vi å utvide den til å håndtere R-baserte prosjekter i tillegg til Python. Vi har også laget en Jupyterlab-extension som gir brukerne mulighet til å opprette SSB-prosjekter direkte fra Jupyterlab.\nF.eks. hvis man ønsker å opprette et prosjekt ved navn stat-test, så kan man skrive følgende inn i terminalen:\nssb-project create stat-test\nØnsker man å opprette samme prosjekt fra Jupyterlab gjør man følgende:"
   },
   {
     "objectID": "index.html#hvorfor-trenger-vi-dette",
     "href": "index.html#hvorfor-trenger-vi-dette",
-    "title": "En template for statistikkproduksjon",
-    "section": "Hvorfor trenger vi dette?",
-    "text": "Hvorfor trenger vi dette?\nMer kommer"
+    "title": "Template for statistikkproduksjon",
+    "section": "1 Hvorfor trenger vi dette?",
+    "text": "1 Hvorfor trenger vi dette?\nMer kommer"
   },
   {
     "objectID": "index.html#hva-gjør-programmet",
     "href": "index.html#hva-gjør-programmet",
-    "title": "En template for statistikkproduksjon",
-    "section": "Hva gjør programmet?",
-    "text": "Hva gjør programmet?\nMer kommer"
+    "title": "Template for statistikkproduksjon",
+    "section": "2 Hva gjør programmet?",
+    "text": "2 Hva gjør programmet?\nMer kommer"
   },
   {
     "objectID": "index.html#command-line-interface",
     "href": "index.html#command-line-interface",
-    "title": "En template for statistikkproduksjon",
-    "section": "Command line interface",
-    "text": "Command line interface"
+    "title": "Template for statistikkproduksjon",
+    "section": "3 Command line interface",
+    "text": "3 Command line interface"
   },
   {
     "objectID": "index.html#jupyterlab-extension",
     "href": "index.html#jupyterlab-extension",
-    "title": "En template for statistikkproduksjon",
-    "section": "Jupyterlab-extension",
-    "text": "Jupyterlab-extension\nMer kommer"
+    "title": "Template for statistikkproduksjon",
+    "section": "4 Jupyterlab-extension",
+    "text": "4 Jupyterlab-extension\nMer kommer"
   },
   {
     "objectID": "about.html",
