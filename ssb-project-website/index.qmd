@@ -31,7 +31,7 @@ F.eks. hvis man ønsker å opprette et prosjekt ved navn `stat-test`, så kan ma
 
 Ønsker man å opprette samme prosjekt fra Jupyterlab gjør man følgende: 
 
-
+![Elephant](gif_jl_hack.gif)
 
 ## Hvorfor trenger vi dette?
 
