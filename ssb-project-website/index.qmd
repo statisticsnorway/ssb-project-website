@@ -35,15 +35,74 @@ F.eks. hvis man ønsker å opprette et prosjekt ved navn `stat-test`, så kan ma
 
 ## Hvorfor trenger vi dette?
 
-Mer kommer
+I overgangen til SSB sin nye skyplattform **dapla** er det nødvendig med noen nye arbeidsprossesser når man programmer. Vi må blant annet:
 
+- versjonshåndtere med GIT
+- gjøre kjøremiljøet reproduserbart
+- opprette egen Jupyterlab-kernel for de som bruker Jupyterlab som IDE
+
+Dette vil hjelpe oss med å skrive sikker kode og reproduserbare resultater. For de som ikke er vant med denne arbeidsformen så kan oppstarten være vanskelig. Ved å gjøre oppstarten enklere håper vi at denne delen av arbeidet skal bli mye lettere. 
+
+## Forutsetninger
+
+Følgende må være på plass hvis du ønsker å bruke Github-delen av programmet: 
+
+1. Du må ha en [Github-bruker knyttet til statisticsnorway](https://statistics-norway.atlassian.net/wiki/spaces/KOD/pages/3047030850/Hvordan+opprette+GitHub-konto+og+bli+medlem+i+SSB+sin+organisasjon+der).
+2. Du må ha et [Personal Access Token fra Github](https://statistics-norway.atlassian.net/wiki/spaces/DAPLA/pages/1917779969/Oppstart+personlig+GitHub-bruker+personlig+kode+og+integrere+Jupyter+med+GitHub#Opprette-personlig-aksesskode-i-GitHub).
+
+Klikk på lenkene over for å få en oppskrift på hvordan dette kan gjøres. 
 
 ## Hva gjør programmet?
 
-Mer kommer
+Vi har bygget to komponenter i dette hackathon:
 
-## Command line interface
+1. **Terminal-program (command-line interface eller CLI)**:  
+Det er her all funksjonalitet er lagret, og den kan benyttes av alle IDEer.
 
-## Jupyterlab-extension
+2. **Jupyterlab extension**:  
+Det er et grensesnitt mot CLI der du kan kjøre scriptet fra Jupyterlab.
 
-Mer kommer 
+Under finner du mer detaljer om begge tilnærminger: 
+
+### Command-line interface
+
+CLI med navn `ssb-project`. Hvis du ønsker all funksjonalitet^[Dvs. at du får mappestruktur, git-konfigurasjon og et virtuelt miljø] kan du kjøre:
+
+`ssb-project create stat-test --github-token 1adkjflksdjjgbsfjkdsfj`
+
+I tilleg kan velge bort noe funksjonalitet:
+
+**Ingen versjonshåndtering med GIT**:  
+`ssb-project create stat-test --skip-github`
+
+**Angi åpenheten til Github-repo**:  
+`ssb-project create stat-test --repo-privacy internal`^[Her kan du ogs velge *privat* eller *public*. Public gjør det helt åpent mot resten av verden.]
+
+
+### Jupyterlab-extension
+
+Vi har bygget en Jupyterlab-extension med navn  `@jupyterlab/ssb-project`. Den lar deg sende inn parameterne som skal inn i CLI fra Jupyterlab. Du kan benytte den ved å: 
+
+1. Åpne *Launcher*
+2. Trykk på *Nytt SSB-prosjekt*
+3. Fyll inn feltene
+4. Trykk *Ok*
+
+Når dette er gjort har du fått en mappe på ditt hjemmeområde som inneholder SSB-prosjektet. Hvis du den prosjektnavnet **stat-test** vil det være en mappe på ditt hjemmeområde med det navnet.
+
+## Etter opprettelse av prosjekt? 
+
+Selv om programmet håndteret mye av det som må gjøres ved et nytt prosjekt, så er et noen ting man bør gjøre etterpå: 
+
+- [Gi tilgang til de du skal samarbeide med](https://statistics-norway.atlassian.net/wiki/spaces/KOD/pages/3092709381/Hvordan+opprette+nytt+GitHub-repo#Konfigurere-repo).
+
+Mer kommer.
+
+## Veien videre
+
+Programmet bør i fremtiden kunne gjøre følgende: 
+
+- Slette det som er opprettet. 
+- Bygge et miljø som allerede er skapt av programmet.
+
+

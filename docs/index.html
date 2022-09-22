@@ -93,9 +93,14 @@ ul.task-list{list-style: none;}
    
   <ul>
   <li><a href="#hvorfor-trenger-vi-dette" id="toc-hvorfor-trenger-vi-dette" class="nav-link active" data-scroll-target="#hvorfor-trenger-vi-dette"> <span class="header-section-number">1</span> Hvorfor trenger vi dette?</a></li>
-  <li><a href="#hva-gjør-programmet" id="toc-hva-gjør-programmet" class="nav-link" data-scroll-target="#hva-gjør-programmet"> <span class="header-section-number">2</span> Hva gjør programmet?</a></li>
-  <li><a href="#command-line-interface" id="toc-command-line-interface" class="nav-link" data-scroll-target="#command-line-interface"> <span class="header-section-number">3</span> Command line interface</a></li>
-  <li><a href="#jupyterlab-extension" id="toc-jupyterlab-extension" class="nav-link" data-scroll-target="#jupyterlab-extension"> <span class="header-section-number">4</span> Jupyterlab-extension</a></li>
+  <li><a href="#forutsetninger" id="toc-forutsetninger" class="nav-link" data-scroll-target="#forutsetninger"> <span class="header-section-number">2</span> Forutsetninger</a></li>
+  <li><a href="#hva-gjør-programmet" id="toc-hva-gjør-programmet" class="nav-link" data-scroll-target="#hva-gjør-programmet"> <span class="header-section-number">3</span> Hva gjør programmet?</a>
+  <ul class="collapse">
+  <li><a href="#command-line-interface" id="toc-command-line-interface" class="nav-link" data-scroll-target="#command-line-interface"> <span class="header-section-number">3.1</span> Command-line interface</a></li>
+  <li><a href="#jupyterlab-extension" id="toc-jupyterlab-extension" class="nav-link" data-scroll-target="#jupyterlab-extension"> <span class="header-section-number">3.2</span> Jupyterlab-extension</a></li>
+  </ul></li>
+  <li><a href="#etter-opprettelse-av-prosjekt" id="toc-etter-opprettelse-av-prosjekt" class="nav-link" data-scroll-target="#etter-opprettelse-av-prosjekt"> <span class="header-section-number">4</span> Etter opprettelse av prosjekt?</a></li>
+  <li><a href="#veien-videre" id="toc-veien-videre" class="nav-link" data-scroll-target="#veien-videre"> <span class="header-section-number">5</span> Veien videre</a></li>
   </ul>
 </nav>
 </nav>
@@ -146,18 +151,70 @@ ul.task-list{list-style: none;}
 </div>
 <section id="hvorfor-trenger-vi-dette" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="hvorfor-trenger-vi-dette"><span class="header-section-number">1</span> Hvorfor trenger vi dette?</h2>
-<p>Mer kommer</p>
+<p>I overgangen til SSB sin nye skyplattform <strong>dapla</strong> er det nødvendig med noen nye arbeidsprossesser når man programmer. Vi må blant annet:</p>
+<ul>
+<li>versjonshåndtere med GIT</li>
+<li>gjøre kjøremiljøet reproduserbart</li>
+<li>opprette egen Jupyterlab-kernel for de som bruker Jupyterlab som IDE</li>
+</ul>
+<p>Dette vil hjelpe oss med å skrive sikker kode og reproduserbare resultater. For de som ikke er vant med denne arbeidsformen så kan oppstarten være vanskelig. Ved å gjøre oppstarten enklere håper vi at denne delen av arbeidet skal bli mye lettere.</p>
 </section>
-<section id="hva-gjør-programmet" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="hva-gjør-programmet"><span class="header-section-number">2</span> Hva gjør programmet?</h2>
-<p>Mer kommer</p>
+<section id="forutsetninger" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="forutsetninger"><span class="header-section-number">2</span> Forutsetninger</h2>
+<p>Følgende må være på plass hvis du ønsker å bruke Github-delen av programmet:</p>
+<ol type="1">
+<li>Du må ha en <a href="https://statistics-norway.atlassian.net/wiki/spaces/KOD/pages/3047030850/Hvordan+opprette+GitHub-konto+og+bli+medlem+i+SSB+sin+organisasjon+der">Github-bruker knyttet til statisticsnorway</a>.</li>
+<li>Du må ha et <a href="https://statistics-norway.atlassian.net/wiki/spaces/DAPLA/pages/1917779969/Oppstart+personlig+GitHub-bruker+personlig+kode+og+integrere+Jupyter+med+GitHub#Opprette-personlig-aksesskode-i-GitHub">Personal Access Token fra Github</a>.</li>
+</ol>
+<p>Klikk på lenkene over for å få en oppskrift på hvordan dette kan gjøres.</p>
 </section>
-<section id="command-line-interface" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="command-line-interface"><span class="header-section-number">3</span> Command line interface</h2>
+<section id="hva-gjør-programmet" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="hva-gjør-programmet"><span class="header-section-number">3</span> Hva gjør programmet?</h2>
+<p>Vi har bygget to komponenter i dette hackathon:</p>
+<ol type="1">
+<li><p><strong>Terminal-program (command-line interface eller CLI)</strong>:<br>
+Det er her all funksjonalitet er lagret, og den kan benyttes av alle IDEer.</p></li>
+<li><p><strong>Jupyterlab extension</strong>:<br>
+Det er et grensesnitt mot CLI der du kan kjøre scriptet fra Jupyterlab.</p></li>
+</ol>
+<p>Under finner du mer detaljer om begge tilnærminger:</p>
+<section id="command-line-interface" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="command-line-interface"><span class="header-section-number">3.1</span> Command-line interface</h3>
+<p>CLI med navn <code>ssb-project</code>. Hvis du ønsker all funksjonalitet<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> kan du kjøre:</p>
+<p><code>ssb-project create stat-test --github-token 1adkjflksdjjgbsfjkdsfj</code></p>
+<p>I tilleg kan velge bort noe funksjonalitet:</p>
+<p><strong>Ingen versjonshåndtering med GIT</strong>:<br>
+<code>ssb-project create stat-test --skip-github</code></p>
+<p><strong>Angi åpenheten til Github-repo</strong>:<br>
+<code>ssb-project create stat-test --repo-privacy internal</code><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 </section>
-<section id="jupyterlab-extension" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="jupyterlab-extension"><span class="header-section-number">4</span> Jupyterlab-extension</h2>
-<p>Mer kommer</p>
+<section id="jupyterlab-extension" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="jupyterlab-extension"><span class="header-section-number">3.2</span> Jupyterlab-extension</h3>
+<p>Vi har bygget en Jupyterlab-extension med navn <code>@jupyterlab/ssb-project</code>. Den lar deg sende inn parameterne som skal inn i CLI fra Jupyterlab. Du kan benytte den ved å:</p>
+<ol type="1">
+<li>Åpne <em>Launcher</em></li>
+<li>Trykk på <em>Nytt SSB-prosjekt</em></li>
+<li>Fyll inn feltene</li>
+<li>Trykk <em>Ok</em></li>
+</ol>
+<p>Når dette er gjort har du fått en mappe på ditt hjemmeområde som inneholder SSB-prosjektet. Hvis du den prosjektnavnet <strong>stat-test</strong> vil det være en mappe på ditt hjemmeområde med det navnet.</p>
+</section>
+</section>
+<section id="etter-opprettelse-av-prosjekt" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="etter-opprettelse-av-prosjekt"><span class="header-section-number">4</span> Etter opprettelse av prosjekt?</h2>
+<p>Selv om programmet håndteret mye av det som må gjøres ved et nytt prosjekt, så er et noen ting man bør gjøre etterpå:</p>
+<ul>
+<li><a href="https://statistics-norway.atlassian.net/wiki/spaces/KOD/pages/3092709381/Hvordan+opprette+nytt+GitHub-repo#Konfigurere-repo">Gi tilgang til de du skal samarbeide med</a>.</li>
+</ul>
+<p>Mer kommer.</p>
+</section>
+<section id="veien-videre" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="veien-videre"><span class="header-section-number">5</span> Veien videre</h2>
+<p>Programmet bør i fremtiden kunne gjøre følgende:</p>
+<ul>
+<li>Slette det som er opprettet.</li>
+<li>Bygge et miljø som allerede er skapt av programmet.</li>
+</ul>
 
 
 </section>
@@ -167,6 +224,8 @@ ul.task-list{list-style: none;}
 
 <ol>
 <li id="fn1" role="doc-endnote"><p><em>Team dapla-hurtigstart</em> består av Øyvind Bruer-Skarsbø, Miles Winther, Arne Sørlie og Carl Franklin Corneil.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Dvs. at du får mappestruktur, git-konfigurasjon og et virtuelt miljø<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Her kan du ogs velge <em>privat</em> eller <em>public</em>. Public gjør det helt åpent mot resten av verden.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

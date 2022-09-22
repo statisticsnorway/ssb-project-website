@@ -2,4 +2,9 @@
 title: "About"
 ---
 
-About this site
+Denne nettsiden er en brukervennlig beskrivelse av funksjonaliteten i et program som ble skrevet av `team dapla-hurtigstart` under **HACK4SSB** 2022. `dapla-hurtigstart` referer til at vi ønsker å gjøre prosessen med å programmere statistikkproduksjoner lettere på vår nye data-plattform {DAPLA}. Gruppen består av :
+
+- Øyvind Bruer-Skarsbø
+- Miles Winther
+- Arne Sørli
+- Carl Franklin Corneil

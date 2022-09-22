@@ -11,34 +11,41 @@
     "href": "index.html#hvorfor-trenger-vi-dette",
     "title": "Template for statistikkproduksjon",
     "section": "1 Hvorfor trenger vi dette?",
-    "text": "1 Hvorfor trenger vi dette?\nMer kommer"
+    "text": "1 Hvorfor trenger vi dette?\nI overgangen til SSB sin nye skyplattform dapla er det nødvendig med noen nye arbeidsprossesser når man programmer. Vi må blant annet:\n\nversjonshåndtere med GIT\ngjøre kjøremiljøet reproduserbart\nopprette egen Jupyterlab-kernel for de som bruker Jupyterlab som IDE\n\nDette vil hjelpe oss med å skrive sikker kode og reproduserbare resultater. For de som ikke er vant med denne arbeidsformen så kan oppstarten være vanskelig. Ved å gjøre oppstarten enklere håper vi at denne delen av arbeidet skal bli mye lettere."
+  },
+  {
+    "objectID": "index.html#forutsetninger",
+    "href": "index.html#forutsetninger",
+    "title": "Template for statistikkproduksjon",
+    "section": "2 Forutsetninger",
+    "text": "2 Forutsetninger\nFølgende må være på plass hvis du ønsker å bruke Github-delen av programmet:\n\nDu må ha en Github-bruker knyttet til statisticsnorway.\nDu må ha et Personal Access Token fra Github.\n\nKlikk på lenkene over for å få en oppskrift på hvordan dette kan gjøres."
   },
   {
     "objectID": "index.html#hva-gjør-programmet",
     "href": "index.html#hva-gjør-programmet",
     "title": "Template for statistikkproduksjon",
-    "section": "2 Hva gjør programmet?",
-    "text": "2 Hva gjør programmet?\nMer kommer"
+    "section": "3 Hva gjør programmet?",
+    "text": "3 Hva gjør programmet?\nVi har bygget to komponenter i dette hackathon:\n\nTerminal-program (command-line interface eller CLI):\nDet er her all funksjonalitet er lagret, og den kan benyttes av alle IDEer.\nJupyterlab extension:\nDet er et grensesnitt mot CLI der du kan kjøre scriptet fra Jupyterlab.\n\nUnder finner du mer detaljer om begge tilnærminger:\n\n3.1 Command-line interface\nCLI med navn ssb-project. Hvis du ønsker all funksjonalitet2 kan du kjøre:\nssb-project create stat-test --github-token 1adkjflksdjjgbsfjkdsfj\nI tilleg kan velge bort noe funksjonalitet:\nIngen versjonshåndtering med GIT:\nssb-project create stat-test --skip-github\nAngi åpenheten til Github-repo:\nssb-project create stat-test --repo-privacy internal3\n\n\n3.2 Jupyterlab-extension\nVi har bygget en Jupyterlab-extension med navn @jupyterlab/ssb-project. Den lar deg sende inn parameterne som skal inn i CLI fra Jupyterlab. Du kan benytte den ved å:\n\nÅpne Launcher\nTrykk på Nytt SSB-prosjekt\nFyll inn feltene\nTrykk Ok\n\nNår dette er gjort har du fått en mappe på ditt hjemmeområde som inneholder SSB-prosjektet. Hvis du den prosjektnavnet stat-test vil det være en mappe på ditt hjemmeområde med det navnet."
   },
   {
-    "objectID": "index.html#command-line-interface",
-    "href": "index.html#command-line-interface",
+    "objectID": "index.html#etter-opprettelse-av-prosjekt",
+    "href": "index.html#etter-opprettelse-av-prosjekt",
     "title": "Template for statistikkproduksjon",
-    "section": "3 Command line interface",
-    "text": "3 Command line interface"
+    "section": "4 Etter opprettelse av prosjekt?",
+    "text": "4 Etter opprettelse av prosjekt?\nSelv om programmet håndteret mye av det som må gjøres ved et nytt prosjekt, så er et noen ting man bør gjøre etterpå:\n\nGi tilgang til de du skal samarbeide med.\n\nMer kommer."
   },
   {
-    "objectID": "index.html#jupyterlab-extension",
-    "href": "index.html#jupyterlab-extension",
+    "objectID": "index.html#veien-videre",
+    "href": "index.html#veien-videre",
     "title": "Template for statistikkproduksjon",
-    "section": "4 Jupyterlab-extension",
-    "text": "4 Jupyterlab-extension\nMer kommer"
+    "section": "5 Veien videre",
+    "text": "5 Veien videre\nProgrammet bør i fremtiden kunne gjøre følgende:\n\nSlette det som er opprettet.\nBygge et miljø som allerede er skapt av programmet."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "Øyvind Bruer-Skarsbø\nMiles Winther\nArne Sørli\nCarl Franklin Corneil"
   }
 ]
